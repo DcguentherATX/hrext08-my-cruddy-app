@@ -2,37 +2,131 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>HREXT08 R00lz!</title>
+	<title>TACO DAWG</title>
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.js"
 		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Righteous" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<header>
+		<div class="nav">
+			<div class="logo-container">
+			  <div class="logo"><img class="logo" src="assets/tacodog.jpg"></div>
+		   </div>
+			<div class="challenge">
+				<h1>Welcome to Taco Dawg</h1>
+		    </div>
+			<div id="navbar">
+				<ul>
+					<li id="about">About Me</li>
+					<li id="project">This Project</li>
+					<li id="something">Let's Talk-O</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="dropdowns">
+		<div class="about">
+			<p>My name is Chunk and I am a dachshund that loves tacos.  I am a year and a half old and discovered my passion for tacos during my time in California.  My favorite is a breakfast taco with delicious egg, crispy bacon, gooey cheese, and spicy New Mexico green chilies.</p>
+		</div>
+		<div class="project">
+			<p>This project is about working with local storage to create a functional database.  In addition, we have the challenge of styling and formatting our page.  I wanted to include some functionality, so I decided to add some dropdowns connected to the
+			navbar.  Pretty cool, right?</p>
+		</div>
+		<div class="something">
+			<p>Ruff, ruff!  Feel free to reach out with any comments or questions about tacos and I'll be happy to respond.  My email is:
+			chunk@dachshund.com.  I will respond as soon as possible.</p>
+		</div>
+	</div>
 	<div class="container">
-		<form action="" method="" class="form">
-			<div class="form">
-				<label for="key">Enter key: </label>
-				<input type="text" name="key" id="key" required>
-			</div>
-			<div class="form">
-				<label for="value">Enter value: </label>
-				<input type="text" name="value" id="value" required>
-			</div>
-			<div class="form">
-				<button class="button" id="btn-create" type="button">Create</button>
-				<button class="button" id="btn-update" type="button">Update</button>
-				<button class="button" id="btn-delete" type="button">Delete</button>
-			</div>
+		<h3 class="form-header">Build Your Taco</h3>
+		<div class="form-container">
+			<form action="" method="" class="form">
+				<div class="form">
+					<label class="label" for="name">Fullname: </label>
+					<input type="text" name="name" id="name" placeholder="First Last" required>
+				</div>
+				<div class="form">
+					<label class="label" for="value">Taco Name: </label>
+					<input type="text" name="value" id="value" placeholder="Name Your Taco" required>
+				</div>
+				<div class="form">
+					<label class="label" for="tortilla">Tortilla: </label>
+					<div class="radio">
+					<input type="radio" name="tortilla" id="corn" value="corn" checked>
+					<label class="radio-label" for="corn">Corn</label>
+					<input type="radio" name="tortilla" id="flour" value="flour">
+					<label class="radio-label" for="flour">Flour</label>
+				</div>
+				</div>
+				<div class="form">
+					<label class="label" for="protein">Protein: </label>
+					<div class="radio">
+						<input type="radio" id="chicken" name="protein" value="chicken" checked>
+						<label class="radio-label" for="chicken">Chicken</label> 
+						<input type="radio" id="beef" name="protein" value="beef">
+						<label class="radio-label" for="beef">Beef</label> 
+						<input type="radio" id="pork" name="protein" value="pork">
+						<label class="radio-label" for="pork">Pork</label> 
+						<input type="radio" id="lengua" name="protein" value="lengua">
+						<label class="radio-label" for="lengua">Lengua</label> 
+						<input type="radio" id="sausage" name="protein" value="sausage">
+						<label class="radio-label" for="sausage">Sausage</label> 
+					</div>
+				</div>
+				<div class="form">
+					<label class="label" for="toppings">Toppings: </label>
+					<div class="checkbox"> 
+						<input class="checkbox-input" type="checkbox" id="onion" name="toppings" value="onion">
+						<label class="checkbox-label" for="onion">Onion</label> 
+						<input class="checkbox-input" type="checkbox" id="cheese" name="toppings" value="cheese">
+						<label class="checkbox-label" for="cheese">Cheese</label> 
+						<input class="checkbox-input" type="checkbox" id="lettuce" name="toppings" value="lettuce">
+						<label class="checkbox-label" for="lettuce">Lettuce</label> 
+						<input class="checkbox-input" type="checkbox" id="tomato" name="toppings" value="tomato">
+						<label class="checkbox-label" for="tomato">Tomato</label> 
+						<input class="checkbox-input" type="checkbox" id="avocado" name="toppings" value="avocado">
+						<label class="checkbox-label" for="avocado">Avocado</label> 
+					</div>
+				</div>
+				<div class="form">
+					<label class="label" for="salsa">Salsa: </label>
+					<div class="radio">
+						<input type="radio" id="tomatillo" name="salsa" value="tomatillo" checked>
+						<label class="radio-label" for="tomatillo">Tomatillo</label> 
+						<input type="radio" id="chipotle" name="salsa" value="chipotle">
+						<label class="radio-label" for="chipotle">Chipotle</label> 
+						<input type="radio" id="habanero" name="salsa" value="habanero">
+						<label class="radio-label" for="habanero">Habanero</label> 
+						<input type="radio" id="pico" name="salsa" value="pico de gallo">
+						<label class="radio-label" for="pico">Pico de Gallo</label> 
+						<input type="radio" id="poblano" name="salsa" value="roasted poblano">
+						<label class="radio-label" for="poblano">Roasted Poblano</label> 
+					</div>
+				</div>
+				<div class="form-buttons">
+					<button class="button" id="btn-create" type="button">Create</button>
+					<button class="button" id="btn-update" type="button">Update</button>
+					<button class="button" id="btn-delete" type="button">Delete</button>
+				</div>
 			<!-- clear button? -->
-		</form>	
+			</form>	
+		</div>
+		<div class="status-container">
+			<div class="status">
+				<div id="statusLabel">Status:</div>
+		 	</div>
+		</div>
+		<div class="table">
 		<table>
 			<thead>
 				<tr>
-					<th>Key</th>
-					<th>Value</th>
+					<th class="first">Fullname</th>
+					<th class="second">Favorite Taco</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -43,7 +137,14 @@
 			</tbody>
 		</table>
 	</div>
-	<div id="statusLabel">Status:</div>
+	<div class="clear-container">
+		<button class="button" id="btn-clear" type="button">Clear</button>
+	</div>
+</div>
+
+<footer>
+	<img src="assets/corgitaco.gif" class="corgi" alt="animated corgi in a taco">
+</footer>
 
 	<script src="app/app.js"></script>
   <!--
