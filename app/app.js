@@ -97,6 +97,8 @@ $(document).ready(function() {
 	   	}
 	});
 
+	//slide down for dropdowns
+
 	var count = 0;
 	$('#about').on('click', function() {
 		$(".about").removeClass('hidden');

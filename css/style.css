@@ -11,69 +11,53 @@ state changing styling
 
 body {
 	background-color: rgb(52, 99, 130);
-	margin: 0;
 	font-family: 'Oswald', Helvetica, sans-serif;
+	margin: 0;
 }
 
 /*<!-- NAVIGATION -->*/
 
 .nav {
-	display: inline-flex;
-	width: 100%;
-	justify-content: flex-start;
 	align-items: center;
 	background-color: rgb(187, 245, 230);
+	display: inline-flex;
+	justify-content: flex-start;
 	margin: 0;
 	max-height: 76px;
+	width: 100%;
+}
+
+.logo {
+	border-radius: 50%;
+	display: inline-block;
+	float: left;
+	height: 125px;
+	margin-left: 10px;
+	margin-top: 25px;
+	padding: 0 0 0 10px;
+	width: 125px;
 }
 
 .challenge {
 	font-family: 'Righteous', Helvetica, cursive;
 	justify-content: flex-start;
-	padding: 0 5px 0 10px;
 	margin-left: 20px;
+	padding: 0 5px 0 10px;
 }
 
 li {
 	display: inline-block;
+	font-size: 18px;
 	list-style-type: none;
 	padding: 0 10px 0 10px;
-	font-size: 18px;
 }
 
 li:hover {
-	font-weight: 700;
 	color: rgb(52, 99, 130);
+	font-weight: 700;
 }
 
-.logo {
-	display: inline-block;
-	float: left;
-	margin-top: 25px;
-	margin-left: 10px;
-	padding: 0 0 0 10px;
-	height: 125px;
-	width: 125px;
-	border-radius: 50%;
-}
-
-/*
-	FLEXBOX CONTAINER
-	guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-*/
-.container {
-	margin: 50px 200px 50px 200px;
-	display: flex;
-	border: 2px solid grey;
-	flex-direction: column;
-	padding: 25px;
-	justify-content: center;
-	border-radius: 25px;
-	background-color: white;
-}
-
-
-/*<!-- Drop Downs -->*/
+/*<!-- DROPDOWNS -->*/
 
 .dropdowns {
 	margin-left: 160px;
@@ -83,14 +67,14 @@ li:hover {
 .about,
 .project,
 .something {
+	background-color: rgba(187, 245, 230, .5);
+	color: rgb(153, 255, 223);
 	display: inline-block;
+	height: 150px;
 	padding: 5px;
-	width: 32%;
 	text-align: center;
 	vertical-align: top;
-	background-color: rgba(187, 245, 230, .5);
-	height: 150px;
-	color: rgb(153, 255, 223);
+	width: 32%;
 }
 
 .hidden {
@@ -99,13 +83,110 @@ li:hover {
 
 
 /*
+	FLEXBOX CONTAINER
+	guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+.container {
+	background-color: white;
+	border: 2px solid grey;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 50px 250px 50px 250px;
+	padding: 25px;
+}
+
+/*<!-- FORM STYLING -->
+	TODO: validation checking styling 
+*/
+
+.form-container {
+	display: flex;
+	justify-content: center;
+}
+
+.form-header {
+	font-family: 'Righteous', Helvetice, cursive;
+	font-size: 28px;
+	text-align: center;
+}
+
+.form {
+	display: block;
+	vertical-align: middle;
+	width: 600px;
+}
+
+.form-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+label {
+	display: inline-block;
+    padding-right: 10px;
+    width: 50px;
+}
+
+.label {
+	width: 100px;
+}
+
+.radio-label {
+	vertical-align: top;
+}
+
+.checkbox-label {
+	vertical-align: top;
+}
+
+#name,
+#value {
+	width: 200px;
+}
+
+.radio {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
+.checkbox {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
+.button {
+	border-radius: 2px;
+	margin-right: 20px;
+	font-size: 14px;
+}
+
+.button:hover {
+	background-color: rgb(18, 106, 181);
+	border-radius: 2px;
+	color: white;
+}
+
+.clear-container {
+	display: flex;
+	justify-content: center;
+}
+
+/*
 	<!-- TABLE STYLING  -->
 */
 table {
-	width: 700px;
-	margin-top: 25px;
-	margin-bottom: 25px;
 	background-color: rgba(187, 245, 230, 50%);
+	margin-bottom: 25px;
+	margin-top: 25px;
+	width: 700px;
 
 }
 
@@ -140,95 +221,6 @@ tfoot {
     width: 50%;
 }
 
-/*<!-- FORM STYLING -->
-	TODO: validation checking styling 
-*/
-
-.form-container {
-	display: flex;
-	justify-content: center;
-}
-
-.form-header {
-	text-align: center;
-	font-family: 'Righteous', Helvetice, cursive;
-	font-size: 28px;
-}
-form.form {
-	display: block;
-	width: 600px;
-	vertical-align: middle;
-}
-
-.form-buttons {
-	display: flex;
-	justify-content: center;
-}
-
-label, input {
-    margin-bottom: 10px;
-/*    width: 200px;*/
-}
-
-label {
-	display: inline-block;
-    padding-right: 10px;
-    width: 50px;
-}
-
-.label {
-	width: 100px;
-}
-
-.radio-label {
-	vertical-align: top;
-}
-
-.checkbox-label {
-	vertical-align: top;
-}
-
-#name,
-#value {
-	width: 200px;
-}
-
-/*#tomatillo,
-#pico,
-#habanero,
-#poblano,
-#chipotle {
-	vertical-align: top;
-}*/
-
-.radio {
-	display: inline-block;
-	text-align: left;
-	vertical-align: top;
-}
-
-.checkbox {
-	display: inline-block;
-	text-align: left;
-	vertical-align: top;
-}
-
-button.button {
-	margin-right: 20px;
-	border-radius: 2px;
-	font-size: 14px;
-}
-
-button.button:hover {
-	background-color: rgb(18, 106, 181);
-	border-radius: 2px;
-	color: white;
-}
-
-.clear-container {
-	display: flex;
-	justify-content: center;
-}
 
 /*<!-- STATUS LABEL -->*/
 
@@ -244,20 +236,21 @@ button.button:hover {
 }
 
 #statusLabel {
-	padding: 10px 0 10px 0;
 	font-style: italic;
+	padding: 10px 0 10px 0;
 }
 
 /*<!-- FOOTER -->*/
+
 footer {
 	display: flex;
-	justify-content: center;
 	height: 75px;
+	justify-content: center;
 }
 
 .corgi {
 	height: 100px;
-	width: 100px;
 	margin-bottom: 10px;
+	width: 100px;
 }
 
